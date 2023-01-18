@@ -18,6 +18,7 @@
       <label>Password</label>
       <small>Between 8 and 60 characters long</small>
     </div>
+    <p>Not a user? <a href="/register">Register</a></p>
     <button type="submit" class="btn btn-primary w-100 my-3">Login</button>
   </form>
   <?php //pp($_SESSION) 

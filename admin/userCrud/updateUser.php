@@ -1,8 +1,6 @@
-<?php require "../class/Database.php" ?>
+<?php require "../../class/Database.php" ?>
 
 <?php
-// print_r($_POST);
-// die();
 
 use class\Database;
 

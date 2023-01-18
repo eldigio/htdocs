@@ -40,6 +40,13 @@ function errorRedirect($uri, $mex)
   exit;
 }
 
+function successRedirect($uri, $mex)
+{
+  $_SESSION["success"] = $mex;
+  header("Location: {$uri}");
+  exit;
+}
+
 function redirect($uri)
 {
   header("Location: {$uri}");

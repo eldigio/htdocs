@@ -29,6 +29,7 @@ if (password_verify($_POST["password"], $data->password)) {
   $_SESSION["logged"] = true;
   $_SESSION["role"] = $data->role;
   $_SESSION["name"] = $data->nome;
+  $_SESSION["user_id"] = $data->id;
   redirect("/{$data->role}");
 }
 

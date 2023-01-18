@@ -7,6 +7,12 @@
 
 <main class="container">
   <h1 class="my-3 text-center">Hello, <?= $_SESSION["name"] ?? "" ?></h1>
+
+  <div class="row">
+    <div class="col-8"><?php require "readCourses.php" ?></div>
+    <div class="col-4"></div>
+  </div>
+
 </main>
 
 <?php require "../partials/footer.php" ?>
