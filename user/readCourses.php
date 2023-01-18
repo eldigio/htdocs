@@ -6,7 +6,11 @@ use class\Database;
 
 $db = new Database();
 
-$courses = $db->query("SELECT * FROM course")->findAll();
+$courses = $db->query("SELECT * FROM course ORDER BY user_id")->findAll();
+
+$users = $db->query("SELECT user_id, course_id from courseusers ORDER BY user_id")->findAll();
+// pp($users);
+// pp($courses);
 
 // pp($_SESSION);
 // echo key($courses);
@@ -27,7 +31,15 @@ $courses = $db->query("SELECT * FROM course")->findAll();
         <div class="carousel-caption d-none d-md-block">
           <p><?= $course->descrizione ?></p>
           <form action="enrollUser.php" method="post">
-            <button type="submit" class="btn btn-primary">Enroll Now</button>
+            <?php if ($_SESSION["user_id"] == $users[$i]->user_id) : ?>
+              <button type="submit" class="btn btn-secondary" disabled>
+                Already enrolled
+              </button>
+            <?php else : ?>
+              <button type="submit" class="btn btn-primary">
+                Enroll now
+              </button>
+            <?php endif ?>
             <input type="hidden" name="course_id" value="<?= $course->id ?>">
             <input type="hidden" name="user_id" value="<?= $_SESSION["user_id"] ?>">
           </form>
