@@ -6,8 +6,6 @@
 
 <main class="container">
   <h1 class="my-3 text-center">Homepage</h1>
-  <?php //pp($_SESSION) 
-  ?>
 </main>
 
 <?php require "partials/footer.php" ?>
