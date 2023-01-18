@@ -13,7 +13,7 @@
         <div class="dropdown-center">
           <button class="btn btn-dark dropdown-toggle text-capitalize" type="button" data-bs-toggle="dropdown">
             <?php if (isset($_SESSION["logged"])) : ?>
-              <?= $_SESSION["role"] ?>
+              <?= $_SESSION["role"] === "admin" ? $_SESSION["role"] : $_SESSION["name"] ?>
             <?php else : ?>
               <?= $icon_user ?>
             <?php endif ?>

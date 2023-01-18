@@ -28,6 +28,7 @@ $data = $db->query("SELECT * FROM users where email = :email", [
 if (password_verify($_POST["password"], $data->password)) {
   $_SESSION["logged"] = true;
   $_SESSION["role"] = $data->role;
+  $_SESSION["name"] = $data->nome;
   redirect("/{$data->role}");
 }
 

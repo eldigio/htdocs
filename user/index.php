@@ -6,7 +6,7 @@
 <?php if ($_SESSION["role"] === "admin") redirect("/admin") ?>
 
 <main class="container">
-  <h1 class="my-3 text-center">Hello, <?= $_SESSION["role"] ?? "" ?></h1>
+  <h1 class="my-3 text-center">Hello, <?= $_SESSION["name"] ?? "" ?></h1>
 </main>
 
 <?php require "../partials/footer.php" ?>
