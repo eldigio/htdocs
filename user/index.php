@@ -10,7 +10,9 @@
 
   <div class="row">
     <div class="col-8"><?php require "readCourses.php" ?></div>
-    <div class="col-4 d-flex flex-column justify-content-center align-items-center gap-3"><?php require "readUser.php" ?></div>
+    <div class="col-4 d-flex flex-column justify-content-center">
+      <ul class="list-group"><?php require "readUser.php" ?></ul>
+    </div>
   </div>
 
 </main>
